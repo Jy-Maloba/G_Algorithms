@@ -26,7 +26,7 @@ graph["jonny"] = []
 
 #BREADTH FIRST SEARCH---Implementing the Algorithm
 #It is a first in first out data structure (FIFO)
-#It tells you whether there is a pathe from A to B, if there is, It gives you the shortest path
+#It tells you whether there is a path from A to B, if there is, It gives you the shortest path
 
 from collections import deque
 #pseudocode

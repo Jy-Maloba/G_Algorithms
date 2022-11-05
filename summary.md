@@ -156,3 +156,47 @@ A good hash function will give you very few collisions
 To avoid collisions you need:
 - low load factor calculation (number of items in hash table/total number of slots). load factor measures how many empty slots remain in the hash table. having a load factor greater than 1 means that you have more items than slots in your array. you need to add more slots(resizing). resize when your load factor is greater than 0.7. hash table takes O(1) even with resizing.
 - a good hash function: distributes values in the array evenly
+
+## CHAPTER 6
+
+**Graphs**
+A graph models a set of connections. It is made up of nodes and edges(circles and connecting lines/arrows)
+nodes directly connected are called neighbours
+- Directed graph has arrows and the relationship follow the direction of the arrow(Rama --> Adit) means Rama owes Adit
+- Undirected graphs have no arrows and the relationship goes both ways (Rama --- Adit)
+
+A tree is a special type of graph where no edges ever point backwards(e.g - familiy tree)
+
+**BREDTH-FIRST SEARCH**
+This algorithm solves solves the shortest-path problem
+It helps answer 2 questions:
+- is there a path from node A to node B
+- what is the shortest path from node A to B
+once a node is  checked make sure it is not checked again to avoid an infinite loop.
+
+The runtime for breadth first search is O(number of people+number of edges)
+commonly written as O(V+E)
+V for number of vertices and E for number of edges
+
+you need to check nodes in the order they were added to the search list..so the search list needs to be a queued to get the shortest path
+
+**Queues**
+Queue uses first in first out(FIFO) data structure
+you can't access random elements in a queue
+Stack uses Last in first out(LIFO) data structure
+
+## CHAPTER 7
+## DIJKSTRA ALGORITHM
+breadth first search finds the path with the fewest nodes
+BFS, can work on unweighted graph
+
+Dijkstra algorithm finds the path with the least cost/time/Weight
+Dijkstra works on weighted and directed acyclic graphs
+Dijkstra doesn't use negative weight edges, 
+negative weight edges are used in Bellman-ford algorithm
+
+**steps to DIJKSTRA ALGORITHM**
+- Find the cheapest node. This is the node you can get to in the least amount of time.
+-  Check whether there’s a cheaper path to the neighbors of this node. If so, update their costs.
+- Repeat until you’ve done this for every node in the graph.
+- Calculate the inal path.
